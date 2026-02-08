@@ -79,7 +79,7 @@ export default function Deals() {
                     <Link
                       key={deal.id}
                       to={`/deals/${deal.id}`}
-                      className="scout-card block hover:border-foreground transition-colors"
+                      className="primeline-card block hover:border-foreground transition-colors"
                     >
                       <p className="font-medium text-sm">{deal.brands?.name || "—"}</p>
                       <p className="text-xs text-muted-foreground">{deal.athletes?.full_name || "—"}</p>

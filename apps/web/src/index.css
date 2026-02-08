@@ -19,7 +19,7 @@
   .page-title {
     @apply font-sans font-semibold text-2xl tracking-tight;
   }
-  .scout-card {
+  .primeline-card {
     @apply border border-border rounded bg-card p-4;
   }
   .skeleton {

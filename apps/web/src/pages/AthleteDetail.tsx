@@ -62,15 +62,15 @@ export default function AthleteDetail() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="scout-card">
+        <div className="primeline-card">
           <p className="text-xs text-muted-foreground mb-1">Total Followers</p>
           <p className="value-display text-3xl">{formatNumber(totalFollowers)}</p>
         </div>
-        <div className="scout-card">
+        <div className="primeline-card">
           <p className="text-xs text-muted-foreground mb-1">Composite Score</p>
           <p className="value-display text-3xl">{athlete.composite_score || "—"}</p>
         </div>
-        <div className="scout-card">
+        <div className="primeline-card">
           <p className="text-xs text-muted-foreground mb-1">Active Deals</p>
           <p className="value-display text-3xl">
             {(athlete.deals || []).filter((d: any) => d.stage === "active").length}
@@ -82,7 +82,7 @@ export default function AthleteDetail() {
       <h2 className="font-semibold text-sm mb-3">Social Profiles</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
         {profiles.map((p: any) => (
-          <div key={p.platform} className="scout-card">
+          <div key={p.platform} className="primeline-card">
             <p className="text-xs text-muted-foreground capitalize">{p.platform}</p>
             <p className="font-mono text-sm">{p.handle}</p>
             <div className="flex justify-between mt-2">
@@ -103,7 +103,7 @@ export default function AthleteDetail() {
         />
       </h2>
       {latestVal ? (
-        <div className="scout-card mb-8">
+        <div className="primeline-card mb-8">
           <MoneyDisplay
             low={latestVal.valuation?.annual?.low}
             high={latestVal.valuation?.annual?.high}
@@ -123,7 +123,7 @@ export default function AthleteDetail() {
           </div>
         </div>
       ) : (
-        <div className="scout-card mb-8">
+        <div className="primeline-card mb-8">
           <p className="text-sm text-muted-foreground">No valuation data yet.</p>
         </div>
       )}

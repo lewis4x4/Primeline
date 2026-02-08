@@ -1,5 +1,5 @@
 -- ============================================================================
--- SCOUT NIL Agency Platform  -  v2.1.1  Addendum
+-- PRIMELINE NIL Agency Platform  -  v2.1.1  Addendum
 -- ============================================================================
 -- Safety-check migration: ensures the Live Receipt columns exist on
 -- calculator_reports.  These columns should already be present from the

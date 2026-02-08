@@ -1,5 +1,5 @@
 -- ============================================================================
--- SCOUT NIL Agency Platform  -  v2.1  Migration
+-- PRIMELINE NIL Agency Platform  -  v2.1  Migration
 -- ============================================================================
 -- Adds deal-intelligence, rate-card, athlete-valuation, and public
 -- calculator-lead tables along with supporting functions and RLS.

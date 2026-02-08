@@ -40,7 +40,7 @@ export default function Digest() {
           {/* Top Matches */}
           <section>
             <h2 className="font-semibold text-sm mb-3">Top 10 Matches</h2>
-            <div className="scout-card">
+            <div className="primeline-card">
               {(content.top_matches || []).length === 0 ? (
                 <p className="text-sm text-muted-foreground">No new matches</p>
               ) : (
@@ -64,7 +64,7 @@ export default function Digest() {
             <h2 className="font-semibold text-sm mb-3">
               Needs Contact <span className="text-xs text-warning font-normal">24h SLA</span>
             </h2>
-            <div className="scout-card">
+            <div className="primeline-card">
               {(content.needs_contact || []).length === 0 ? (
                 <p className="text-sm text-muted-foreground">All contacts up to date</p>
               ) : (
@@ -85,7 +85,7 @@ export default function Digest() {
           {/* Follow-ups Due */}
           <section>
             <h2 className="font-semibold text-sm mb-3">Follow-ups Due Today</h2>
-            <div className="scout-card">
+            <div className="primeline-card">
               {(content.followups_due || []).length === 0 ? (
                 <p className="text-sm text-muted-foreground">No follow-ups due</p>
               ) : (
@@ -108,7 +108,7 @@ export default function Digest() {
             <h2 className="font-semibold text-sm mb-3">
               Deal Intel to Review <span className="text-xs text-warning font-normal">48h SLA</span>
             </h2>
-            <div className="scout-card">
+            <div className="primeline-card">
               {(content.deal_intel_review || []).length === 0 ? (
                 <p className="text-sm text-muted-foreground">Inbox clear</p>
               ) : (

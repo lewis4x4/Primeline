@@ -1,5 +1,5 @@
 -- ============================================================================
--- SCOUT NIL Agency Platform  -  v1.3  Complete Bootstrap
+-- PRIMELINE NIL Agency Platform  -  v1.3  Complete Bootstrap
 -- ============================================================================
 -- This migration creates the entire foundational schema: enums, tables,
 -- functions, triggers, RLS policies, indexes, and seed data.
@@ -197,7 +197,7 @@ CREATE TABLE brand_signals (
 
 -- Deduplicate signals per brand + type + fingerprint + calendar day
 CREATE UNIQUE INDEX uq_brand_signals_fingerprint
-  ON brand_signals (brand_id, signal_type, signal_fingerprint, (detected_at::date));
+  ON brand_signals (brand_id, signal_type, signal_fingerprint, (timezone('UTC', detected_at)::date));
 
 -- 2.10  scrape_runs
 CREATE TABLE scrape_runs (

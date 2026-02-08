@@ -21,7 +21,7 @@ import type {
 const FN = "[generate-calculator-report]";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") ?? "";
-const PUBLIC_SITE_URL = Deno.env.get("PUBLIC_SITE_URL") ?? "https://scout.primeline.ai";
+const PUBLIC_SITE_URL = Deno.env.get("PUBLIC_SITE_URL") ?? "https://primeline.ai";
 const CRON_SECRET = Deno.env.get("CRON_SECRET") ?? "";
 
 /**
@@ -243,7 +243,7 @@ serve(async (req: Request) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "SCOUT <reports@primeline.ai>",
+            from: "PRIMELINE <reports@primeline.ai>",
             to: [lead.email],
             subject: "Your NIL Valuation Report",
             html: htmlBody,

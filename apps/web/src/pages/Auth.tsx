@@ -32,7 +32,7 @@ export default function Auth() {
       return;
     }
 
-    navigate("/");
+    navigate("/dashboard");
   }
 
   return (

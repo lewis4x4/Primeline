@@ -15,7 +15,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/athletes", icon: Users, label: "Athletes" },
   { to: "/brands", icon: Building2, label: "Brands" },
   { to: "/matches", icon: Target, label: "Matches" },
@@ -33,7 +33,7 @@ export default function Sidebar() {
     <aside className="w-56 border-r border-border bg-background h-screen flex flex-col">
       <div className="p-4 border-b border-border">
         <h1 className="font-sans font-semibold text-lg tracking-tight">
-          SCOUT
+          PRIMELINE
         </h1>
       </div>
       <nav className="flex-1 p-2 space-y-0.5 overflow-y-auto">
@@ -41,7 +41,7 @@ export default function Sidebar() {
           <NavLink
             key={item.to}
             to={item.to}
-            end={item.to === "/"}
+            end={item.to === "/dashboard"}
             className={({ isActive }) =>
               cn(
                 "flex items-center gap-2.5 px-3 py-2 text-sm rounded transition-colors",

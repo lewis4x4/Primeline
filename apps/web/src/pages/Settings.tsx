@@ -9,7 +9,7 @@ export default function Settings() {
       <PageHeader title="Settings" />
 
       <div className="space-y-6">
-        <div className="scout-card">
+        <div className="primeline-card">
           <h2 className="font-semibold text-sm mb-3">Account</h2>
           <div className="space-y-2">
             <div>
@@ -23,7 +23,7 @@ export default function Settings() {
           </div>
         </div>
 
-        <div className="scout-card">
+        <div className="primeline-card">
           <h2 className="font-semibold text-sm mb-3">Matching Engine Config</h2>
           <p className="text-sm text-muted-foreground">
             Configure matching weights and thresholds.

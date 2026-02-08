@@ -73,15 +73,15 @@ export default function BrandDetail() {
 
       {activeTab === "Overview" && (
         <div className="grid grid-cols-2 gap-4">
-          <div className="scout-card">
+          <div className="primeline-card">
             <p className="text-xs text-muted-foreground">Website</p>
             <p className="text-sm">{brand.website || "—"}</p>
           </div>
-          <div className="scout-card">
+          <div className="primeline-card">
             <p className="text-xs text-muted-foreground">Budget Tier</p>
             <p className="text-sm capitalize">{brand.budget_tier || "—"}</p>
           </div>
-          <div className="scout-card">
+          <div className="primeline-card">
             <p className="text-xs text-muted-foreground">Categories</p>
             <div className="flex flex-wrap gap-1 mt-1">
               {(brand.category || []).map((c: string) => (
@@ -89,7 +89,7 @@ export default function BrandDetail() {
               ))}
             </div>
           </div>
-          <div className="scout-card">
+          <div className="primeline-card">
             <p className="text-xs text-muted-foreground">Signal Count</p>
             <p className="value-display text-2xl">{brand.signal_count}</p>
           </div>

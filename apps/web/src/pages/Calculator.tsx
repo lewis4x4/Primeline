@@ -119,7 +119,7 @@ export default function Calculator() {
         {/* Per-Post Rates */}
         <div className="grid grid-cols-2 gap-3 mb-8">
           {Object.entries(result.per_post || {}).map(([key, rates]) => (
-            <div key={key} className="scout-card">
+            <div key={key} className="primeline-card">
               <p className="text-xs text-muted-foreground capitalize mb-1">
                 {key.replace(/_/g, " ")}
               </p>

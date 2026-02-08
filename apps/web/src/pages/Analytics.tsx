@@ -27,7 +27,7 @@ export default function Analytics() {
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="scout-card">
+        <div className="primeline-card">
           <h3 className="font-semibold text-sm mb-4">Brands Discovered / Week</h3>
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={weeklyBrands}>
@@ -40,7 +40,7 @@ export default function Analytics() {
           </ResponsiveContainer>
         </div>
 
-        <div className="scout-card">
+        <div className="primeline-card">
           <h3 className="font-semibold text-sm mb-4">Revenue by Month</h3>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={monthlyRevenue}>
@@ -53,7 +53,7 @@ export default function Analytics() {
           </ResponsiveContainer>
         </div>
 
-        <div className="scout-card">
+        <div className="primeline-card">
           <h3 className="font-semibold text-sm mb-4">Match-to-Deal Conversion</h3>
           <div className="space-y-3">
             <FunnelRow label="Matches Generated" value={500} width={100} />
@@ -63,7 +63,7 @@ export default function Analytics() {
           </div>
         </div>
 
-        <div className="scout-card">
+        <div className="primeline-card">
           <h3 className="font-semibold text-sm mb-4">Top Athletes by Deal Count</h3>
           <p className="text-sm text-muted-foreground">No data yet</p>
         </div>

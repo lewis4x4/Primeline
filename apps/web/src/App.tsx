@@ -7,6 +7,7 @@ import AppLayout from "@/components/layout/AppLayout";
 import PublicLayout from "@/components/layout/PublicLayout";
 import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
+const Home = React.lazy(() => import("@/pages/Home"));
 const Dashboard = React.lazy(() => import("@/pages/Dashboard"));
 const Auth = React.lazy(() => import("@/pages/Auth"));
 const Athletes = React.lazy(() => import("@/pages/Athletes"));
@@ -47,14 +48,16 @@ export default function App() {
           <Routes>
             {/* Public routes */}
             <Route element={<PublicLayout />}>
+              <Route index element={<Home />} />
               <Route path="/calculator" element={<Calculator />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
 
             {/* Dashboard routes - auth required */}
             <Route element={<ProtectedRoute />}>
               <Route element={<AppLayout />}>
-                <Route index element={<Dashboard />} />
+                <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/athletes" element={<Athletes />} />
                 <Route path="/athletes/new" element={<AthleteCreate />} />
                 <Route path="/athletes/:id" element={<AthleteDetail />} />
@@ -70,8 +73,6 @@ export default function App() {
                 <Route path="/settings" element={<Settings />} />
               </Route>
             </Route>
-
-            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
         <Toaster />

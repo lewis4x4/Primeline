@@ -1,5 +1,5 @@
 -- ============================================================================
--- SCOUT NIL Agency Platform  -  v2.2  Supporting Infrastructure
+-- PRIMELINE NIL Agency Platform  -  v2.2  Supporting Infrastructure
 -- ============================================================================
 -- Rate limiting, brand signal helpers, comparable-deal finder, and
 -- maintenance utilities.

@@ -183,7 +183,7 @@ serve(async (req: Request) => {
             type: "header",
             text: {
               type: "plain_text",
-              text: "SCOUT Daily Digest",
+              text: "PRIMELINE Daily Digest",
             },
           },
           {
