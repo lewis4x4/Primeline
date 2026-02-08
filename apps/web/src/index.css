@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .data-cell {
+    @apply font-mono text-sm tabular-nums;
+  }
+  .page-title {
+    @apply font-sans font-semibold text-2xl tracking-tight;
+  }
+  .scout-card {
+    @apply border border-border rounded bg-card p-4;
+  }
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+  .value-display {
+    @apply font-mono font-medium tracking-tight;
+  }
+}

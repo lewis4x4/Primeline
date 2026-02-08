@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build
+dist/
+build/
+.vite/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+coverage/
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# Bun
+bun.lockb
+
+# OS
+Thumbs.db
