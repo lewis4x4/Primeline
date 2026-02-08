@@ -16,6 +16,7 @@ const AthleteCreate = React.lazy(() => import("@/pages/AthleteCreate"));
 const Brands = React.lazy(() => import("@/pages/Brands"));
 const BrandDetail = React.lazy(() => import("@/pages/BrandDetail"));
 const Deals = React.lazy(() => import("@/pages/Deals"));
+const DealDetail = React.lazy(() => import("@/pages/DealDetail"));
 const Matches = React.lazy(() => import("@/pages/Matches"));
 const Calculator = React.lazy(() => import("@/pages/Calculator"));
 const Digest = React.lazy(() => import("@/pages/Digest"));
@@ -64,6 +65,7 @@ export default function App() {
                 <Route path="/brands" element={<Brands />} />
                 <Route path="/brands/:id" element={<BrandDetail />} />
                 <Route path="/deals" element={<Deals />} />
+                <Route path="/deals/:id" element={<DealDetail />} />
                 <Route path="/matches" element={<Matches />} />
                 <Route path="/digest" element={<Digest />} />
                 <Route path="/deal-intel" element={<DealIntel />} />

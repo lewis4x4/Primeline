@@ -10,6 +10,9 @@
     @apply bg-background text-foreground font-sans antialiased;
     margin: 0;
   }
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
 }
 
 @layer components {
