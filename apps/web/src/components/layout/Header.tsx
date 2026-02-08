@@ -5,15 +5,14 @@ export default function Header() {
   const { user, signOut } = useAuth();
 
   return (
-    <header className="h-12 border-b border-border bg-background flex items-center justify-between px-6">
-      <div />
+    <header className="h-12 border-b border-gray-200 flex items-center justify-end px-6">
       <div className="flex items-center gap-4">
-        <span className="text-sm text-muted-foreground">
+        <span className="font-mono text-xs text-gray-500">
           {user?.email}
         </span>
         <button
           onClick={() => signOut()}
-          className="text-muted-foreground hover:text-foreground transition-colors"
+          className="text-gray-400 hover:text-black transition-colors"
           title="Sign out"
         >
           <LogOut className="h-4 w-4" />

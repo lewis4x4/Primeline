@@ -12,7 +12,6 @@ import {
   UserPlus,
   Settings,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const navItems = [
   { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
@@ -30,25 +29,26 @@ const navItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-56 border-r border-border bg-background h-screen flex flex-col">
-      <div className="p-4 border-b border-border">
-        <h1 className="font-sans font-semibold text-lg tracking-tight">
-          PRIMELINE
-        </h1>
+    <aside className="w-56 bg-black text-white border-r border-gray-800 h-screen flex flex-col">
+      <div className="h-16 flex items-center px-5 border-b border-gray-800">
+        <img
+          src="/primeline-logo.png"
+          alt="PRIMELINE"
+          className="h-10 w-auto invert"
+        />
       </div>
-      <nav className="flex-1 p-2 space-y-0.5 overflow-y-auto">
+      <nav className="flex-1 py-3 px-2 space-y-0.5 overflow-y-auto">
         {navItems.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}
             end={item.to === "/dashboard"}
             className={({ isActive }) =>
-              cn(
-                "flex items-center gap-2.5 px-3 py-2 text-sm rounded transition-colors",
+              `flex items-center gap-2.5 px-3 py-2 text-sm rounded-none transition-colors ${
                 isActive
-                  ? "bg-foreground text-background font-medium"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted"
-              )
+                  ? "bg-white text-black font-medium"
+                  : "text-gray-400 hover:text-white hover:bg-white/10"
+              }`
             }
           >
             <item.icon className="h-4 w-4 flex-shrink-0" />
