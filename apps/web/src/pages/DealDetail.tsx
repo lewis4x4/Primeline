@@ -24,7 +24,7 @@ function InlineInput({
     <input
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className={`inline-block border-b-2 border-black bg-transparent text-center focus:outline-none focus:border-gray-400 px-1 py-0 ${width} ${className}`}
+      className={`inline-block border-b-2 border-black bg-yellow-50/50 text-center focus:outline-none focus:border-gray-400 px-1 py-0 ${width} ${className}`}
       {...props}
     />
   );
@@ -172,13 +172,6 @@ export default function DealDetail() {
           </span>
           <StagePill stage={deal.stage} />
         </div>
-        <button
-          onClick={() => saveMutation.mutate()}
-          disabled={saveMutation.isPending}
-          className="bg-black text-white rounded-none px-4 h-8 font-mono text-[10px] uppercase tracking-widest hover:bg-gray-800 transition-colors disabled:opacity-50"
-        >
-          {saveMutation.isPending ? "Saving..." : "Save Terms"}
-        </button>
       </div>
 
       {/* Financial Summary Bar */}
@@ -238,7 +231,7 @@ export default function DealDetail() {
           </div>
 
           {/* Mad Libs Contract */}
-          <div className="text-xl leading-[2.5] text-gray-900">
+          <div className="text-xl leading-[2.5] text-gray-900 font-serif">
             This agreement is entered into between{" "}
             <span className="font-bold">{deal.brands?.name || "—"}</span> and{" "}
             <span className="font-bold">
@@ -265,7 +258,7 @@ export default function DealDetail() {
             .
           </div>
 
-          <div className="text-xl leading-[2.5] text-gray-900 mt-6">
+          <div className="text-xl leading-[2.5] text-gray-900 font-serif mt-6">
             In exchange, the Brand agrees to pay a total of{" "}
             <InlineInput
               value={terms.totalValue}
@@ -282,7 +275,7 @@ export default function DealDetail() {
             .
           </div>
 
-          <div className="text-xl leading-[2.5] text-gray-900 mt-6">
+          <div className="text-xl leading-[2.5] text-gray-900 font-serif mt-6">
             Usage rights are granted for{" "}
             <InlineInput
               value={terms.usageRights}
@@ -355,6 +348,17 @@ export default function DealDetail() {
           </p>
           <p className="text-sm text-gray-600 font-mono">{deal.notes}</p>
         </div>
+      )}
+
+      {/* Floating Save Button */}
+      {terms && (
+        <button
+          onClick={() => saveMutation.mutate()}
+          disabled={saveMutation.isPending}
+          className="fixed bottom-8 right-8 bg-black text-white rounded-none px-6 h-10 font-mono text-[10px] uppercase tracking-widest hover:bg-gray-800 transition-colors disabled:opacity-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]"
+        >
+          {saveMutation.isPending ? "Saving..." : "Save Terms"}
+        </button>
       )}
     </div>
   );
